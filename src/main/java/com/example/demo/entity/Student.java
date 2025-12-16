@@ -16,13 +16,21 @@ public class Student{
     public String getName(){
         return name;
     }
-    ublic void setId(Long id){
-        this.id=id;
+    public void setId(String name){
+        this.name=name;
     }
     public String getEmail(){
         return email;
     }
+    public void setId(String email){
+        this.email=email;
+    }
     public float getCgpa(){
         return cgpa;
     }
+    public void setId(float cgpa){
+        this.cgpa=cgpa;
+    }
+
+    public Student(Long id,String name,String email,)
 }
