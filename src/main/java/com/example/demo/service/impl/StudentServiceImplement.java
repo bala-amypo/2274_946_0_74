@@ -15,7 +15,7 @@ public class StudentServiceImplement implements StudentService{
         return repo.save(stu);
     }
     @Override
-    public List<Student>fetchRecord(){
+    public List<Student> fetchRecord(){
         return repo.findAll();
     }
 }
