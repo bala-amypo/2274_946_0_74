@@ -4,5 +4,6 @@ import java.util.List;
 import pom.example.demo.entity.Student;
 public interface StudentService{
 
-    Student createData
+    Student createData(Student stu);
+    List<Student>fetchRecord(); 
 }
