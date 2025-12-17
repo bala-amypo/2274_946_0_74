@@ -4,7 +4,7 @@ import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class StudentServiceImplement implements StudentService{
@@ -19,7 +19,7 @@ public class StudentServiceImplement implements StudentService{
         return repo.findAll();
     }
     @Override
-    public Optional<Student>fetchDataById(int id){
+    public Optional<Student> fetchDataById(int id){
         return repo.findById(id);
     }
 }
