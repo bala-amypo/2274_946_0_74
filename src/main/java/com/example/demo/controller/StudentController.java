@@ -31,8 +31,9 @@ public class StudentController {
         return ser.fetchDataById(id);
     }
     @PutMapping("/updatedata/{id}")
-    public ? fetchDataById(@PathVariable int id,@RequestBody stu){
+    public String fetchDataById(@PathVariable int id,@RequestBody Student stu){
         stu.setId(id);
         ser.createData(stu);
+        return "Data updated Successfully";
     }
 }
