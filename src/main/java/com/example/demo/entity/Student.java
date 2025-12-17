@@ -1,49 +1,50 @@
 package com.example.demo.entity;
-import jakarta.persistence.*;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-public class Student{
-    @Id
-    @Generated
-    private Long id;
-    private String name;
-    private String email;
-    private float cgpa;
+public class Student {
+       @Id
+       private int id;
+       @GeneratedValue(strategy = GenerationType.IDENTITY)
+       private String stuname;
+       private String stuemail;
+       private float cgpa;
+       public int getId() {
+           return id;
+       }
+       public void setId(int id) {
+           this.id = id;
+       }
+       public String getStuname() {
+           return stuname;
+       }
+       public void setStuname(String stuname) {
+           this.stuname = stuname;
+       }
+       public String getStuemail() {
+           return stuemail;
+       }
+       public void setStuemail(String stuemail) {
+           this.stuemail = stuemail;
+       }
+       public float getCgpa() {
+           return cgpa;
+       }
+       public void setCgpa(float cgpa) {
+           this.cgpa = cgpa;
+       }
+       public Student(int id, String stuname, String stuemail, float cgpa) {
+        this.id = id;
+        this.stuname = stuname;
+        this.stuemail = stuemail;
+        this.cgpa = cgpa;
+       }
+       public Student() {
+       }
 
-    public Long getId(){
-        return id;
-    }
-    public void setId(Long id){
-        this.id=id;
-    }
-    public String getName(){
-        return name;
-    }
-    public void setId(String name){
-        this.name=name;
-    }
-    public String getEmail(){
-        return email;
-    }
-    public void setId(String email){
-        this.email=email;
-    }
-    public float getCgpa(){
-        return cgpa;
-    }
-    public void setId(float cgpa){
-        this.cgpa=cgpa;
-    }
-
-    public Student(Long id,String name,String email,float cgpa){
-        this.id=id;
-        this.name=name;
-        this.email=email;
-        this.cgpa=cgpa;
-    }
-
-    public Student(){
-
-    }
-    
+       
 }
