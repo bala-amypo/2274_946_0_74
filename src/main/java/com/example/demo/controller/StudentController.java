@@ -43,12 +43,12 @@ public class StudentController {
         }
     }
      @DeleteMapping("/deletedata/{id}")
-    public String fetchDataById(@PathVariable int id){
+    public String deleteDataById(@PathVariable int id){
         Optional<Student>student=ser.fetchDataById(id);
         if(student.isPresent()){
-        stu.setId(id);
-        ser.createData(stu);
-        return "Data updated Successfully";
+        
+        ser.deleteData(id);
+        return "Data deleted Successfully";
         }
         else{
             return id+ "not found";
