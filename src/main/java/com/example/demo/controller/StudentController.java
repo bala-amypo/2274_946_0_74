@@ -42,4 +42,16 @@ public class StudentController {
             return id+ "not found";
         }
     }
+     @DeleteMapping("/deletedata/{id}")
+    public String fetchDataById(@PathVariable int id){
+        Optional<Student>student=ser.fetchDataById(id);
+        if(student.isPresent()){
+        stu.setId(id);
+        ser.createData(stu);
+        return "Data updated Successfully";
+        }
+        else{
+            return id+ "not found";
+        }
+    }
 }
